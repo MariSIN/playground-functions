@@ -33,7 +33,7 @@ No seu time de desenvolvimento, você ficou responsável por implementar o códi
   <summary><strong>🗓 Data de Entrega</strong></summary><br />
   
   * Este projeto é individual
-  * Serão `1` dias de projeto
+  * Será `1` dias de projeto
   * Data para entrega final do projeto: `02/08/2022 14:00`
 
 </details>
