@@ -23,14 +23,16 @@ console.log(splitSentence('go Trybe'));
 function concatName(words) {
   let first = words.shift();
   let last = words.pop();
-  return (words = last + ', ' + first);
+  words = `${first}, ${last}`;
+  return words;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3) + (ties * 1);
 }
+console.log(footballPoints(14, 8));
 
 // Desafio 6
 function highestCount() {
