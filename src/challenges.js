@@ -30,15 +30,22 @@ console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins * 3) + (ties * 1);
+  return wins * 3 + ties * 1;
 }
 console.log(footballPoints(14, 8));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(a) {
+  let max = Math.max.apply(null, a);
+  let qnt = 0;
+  for (let i of a) {
+    if (i === max) {
+      qnt += 1;
+    }
+  }
+  return qnt;
 }
-
+console.log(highestCount([1, 5, 5, 4]));
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
