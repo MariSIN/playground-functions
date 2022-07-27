@@ -23,7 +23,7 @@ console.log(splitSentence('go Trybe'));
 function concatName(words) {
   let first = words.shift();
   let last = words.pop();
-  words = `${first}, ${last}`;
+  words = `${last}, ${first}`;
   return words;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
@@ -49,47 +49,78 @@ function highestCount(a) {
 console.log(highestCount([1, 5, 5, 4]));
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if ((Math.abs(mouse - cat1)) < (Math.abs(mouse - cat2))) {
+  if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
     return 'cat1';
-  } else if ((Math.abs(mouse - cat1)) > (Math.abs(mouse - cat2))) {
+  } else if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)) {
     return 'cat2';
   } else {
-    return 'os gatos trombam e o rato foge'
+    return 'os gatos trombam e o rato foge';
   }
 }
-console.log(catAndMouse(10, 5, 6))
+console.log(catAndMouse(10, 5, 6));
 
 // Desafio 8
 function fizzBuzz(number) {
-
-  for (let index = 0; index < number.length; index += 1) {
-
-  if (number[index] % 3 === 0 && number[index] % 5 === 0) {
-    number[index] = 'fizzBuzz'; 
-  } else if (number[index] % 3 !== 0 && number[index] % 5 !== 0) {
-    number[index] = 'bug!'
-  } else if (number[index] % 3 === 0) {
-    number[index] = 'fizz'
-  } else if (number[index] % 5 === 0) {
-    number[index] = 'buzz'
+  for (let index in number) {
+    if (number[index] % 3 === 0 && number[index] % 5 === 0) {
+      number[index] = 'fizzBuzz';
+    } else if (number[index] % 3 === 0) {
+      number[index] = 'fizz';
+    } else if (number[index] % 5 === 0) {
+      number[index] = 'buzz';
+    } else {
+      number[index] = 'bug!';
+    }
   }
- }
- return number;
+  return number;
 }
 
 // Desafio 9
-function encode() {
-  
+function encode(word) {
+  let newArray = [''];
+  for (let i = 0; i < word.length; i += 1) {
+    if (word[i] === 'a') {
+      newArray[i] = 1;
+    } else if (word[i] === 'e') {
+      newArray[i] = 2;
+    } else if (word[i] === 'i') {
+      newArray[i] = 3;
+    } else if (word[i] === 'o') {
+      newArray[i] = 4;
+    } else if (word[i] === 'u') {
+      newArray[i] = 5;
+    } else {
+      newArray[i] = word[i];
+    }
+  }
+  return newArray.join('');
 }
-function decode() {
-  // seu código aqui
-}
+console.log(encode('Mariana'));
 
+function decode(word) {
+  let newWord = "";
+  let vogals = ['a', 'e', 'i', 'o','u'];
+  for (let j in vogals);
+  for (let i = 0; i < word.length; i += 1) {
+    if (word[i] === encode) {
+      
+  }
+  return newArray.join('');
+}
+}
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, string) {
+  if(array.length == [] || string.length == ''){
+    return 'Vazio!'
+  }
+  let objetos = [];
+  array.sort()
+  for (let i = 0; i < array.length; i += 1){  
+    objetos.push({tech: array[i], name: string});
+  }
+ return objetos;
 }
-
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'José'));
 module.exports = {
   calcArea,
   catAndMouse,
