@@ -105,7 +105,6 @@ function decode(newWord) {
     if (newWord[i] === '1') {
       newCaracter[i] = 'a';
     } else if (newWord[i] === '2') {
-      //o 2° não quer ler
       newCaracter[i] = 'e';
     } else if (newWord[i] === '3') {
       newCaracter[i] = 'i';
@@ -117,7 +116,7 @@ function decode(newWord) {
       newCaracter[i] = newWord[i];
     }
   }
-  return newCaracter.join(''); // não sei como linkar os 2
+  return newCaracter.join('');
 }
 
 console.log(decode('H2ll4'));

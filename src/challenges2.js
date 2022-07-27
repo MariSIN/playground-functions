@@ -31,7 +31,7 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 }
 // Desafio 13
-function hydrate() {
+function hydrate(bebida) {
   // seu código aqui
 }
 
