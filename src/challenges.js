@@ -98,40 +98,41 @@ function encode(word) {
 }
 console.log(encode('Mariana'));
 
-  function decode(newWord) {
-    let newCaracter = [''];
-   // let newWord1 = [''];
-    for (let i = 0; i < newWord.length; i += 1) {
-      if (newWord[i] === '1') {
-        newCaracter[i] = 'a';
-      } else if (newWord[i] === '2') { //o 2° não quer ler
-        newCaracter[i] = 'e';
-      } else if (newWord[i] === '3') {
-        newCaracter[i] = 'i';
-      } else if (newWord[i] === '4') {
-        newCaracter[i] = 'o';
-      } else if (newWord[i] === '5') {
-        newCaracter[i] = 'u';
-      } else {
-        newCaracter[i] = newWord[i];
-      }
+function decode(newWord) {
+  let newCaracter = [''];
+  // let newWord1 = [''];
+  for (let i = 0; i < newWord.length; i += 1) {
+    if (newWord[i] === '1') {
+      newCaracter[i] = 'a';
+    } else if (newWord[i] === '2') {
+      //o 2° não quer ler
+      newCaracter[i] = 'e';
+    } else if (newWord[i] === '3') {
+      newCaracter[i] = 'i';
+    } else if (newWord[i] === '4') {
+      newCaracter[i] = 'o';
+    } else if (newWord[i] === '5') {
+      newCaracter[i] = 'u';
+    } else {
+      newCaracter[i] = newWord[i];
     }
-    return newCaracter.join(''); // não sei como linkar os 2
   }
+  return newCaracter.join(''); // não sei como linkar os 2
+}
 
-  console.log(decode('H2ll4'));
+console.log(decode('H2ll4'));
 
 // Desafio 10
 function techList(array, string) {
-  if(array.length == [] || string.length == ''){
-    return 'Vazio!'
+  if (array.length == [] || string.length == '') {
+    return 'Vazio!';
   }
   let objetos = [];
-  array.sort()
-  for (let i = 0; i < array.length; i += 1){  
-    objetos.push({tech: array[i], name: string});
+  array.sort();
+  for (let i = 0; i < array.length; i += 1) {
+    objetos.push({ tech: array[i], name: string });
   }
- return objetos;
+  return objetos;
 }
 console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'José'));
 module.exports = {
