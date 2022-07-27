@@ -1,4 +1,5 @@
 // Desafio 1
+
 function compareTrue(t, f) {
   if (t && f === true) {
     return true;
@@ -8,18 +9,21 @@ function compareTrue(t, f) {
 console.log(compareTrue(false, false));
 
 // Desafio 2
+
 function calcArea(base, height) {
   return (base * height) / 2;
 }
 console.log(calcArea(10, 50));
 
 // Desafio 3
+
 function splitSentence(word) {
   return word.split(' ', -1);
 }
 console.log(splitSentence('go Trybe'));
 
 // Desafio 4
+
 function concatName(words) {
   let first = words.shift();
   let last = words.pop();
@@ -29,12 +33,14 @@ function concatName(words) {
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
+
 function footballPoints(wins, ties) {
   return wins * 3 + ties * 1;
 }
 console.log(footballPoints(14, 8));
 
 // Desafio 6
+
 function highestCount(a) {
   let max = Math.max.apply(null, a);
   let qnt = 0;
@@ -47,7 +53,9 @@ function highestCount(a) {
 }
 
 console.log(highestCount([1, 5, 5, 4]));
+
 // Desafio 7
+
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
     return 'cat1';
@@ -60,6 +68,7 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log(catAndMouse(10, 5, 6));
 
 // Desafio 8
+
 function fizzBuzz(number) {
   for (let index in number) {
     if (number[index] % 3 === 0 && number[index] % 5 === 0) {
@@ -100,7 +109,6 @@ console.log(encode('Mariana'));
 
 function decode(newWord) {
   let newCaracter = [''];
-  // let newWord1 = [''];
   for (let i = 0; i < newWord.length; i += 1) {
     if (newWord[i] === '1') {
       newCaracter[i] = 'a';
@@ -122,6 +130,7 @@ function decode(newWord) {
 console.log(decode('H2ll4'));
 
 // Desafio 10
+
 function techList(array, string) {
   if (array.length == [] || string.length == '') {
     return 'Vazio!';
