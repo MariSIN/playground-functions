@@ -18,16 +18,18 @@ function generatePhoneNumber(telephone) {
   }  
   return `(${[telephone[0]]}${telephone[1]}) ${telephone[2]}${telephone[3]}${telephone[4]}${telephone[5]}${telephone[6]}-${telephone[7]}${telephone[8]}${telephone[9]}${telephone[10]}`;
 }
-
-
-
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 1, 1, 1]));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB) {
+    return true;
+  } else if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA -lineC) && lineC > Math.abs(lineB - lineA)){
+    return true;
+} else {
+  return false;
 }
-
+}
 // Desafio 13
 function hydrate() {
   // seu código aqui
