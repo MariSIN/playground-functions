@@ -43,15 +43,15 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 
-  function hydrate(bebida) {
-    let count = 0;
-    for (let i = 0; i < bebida.length; i += 1) {
-      if (!isNaN(parseInt(bebida[i]))) {
-        count += parseInt(bebida[i])
-      }
-    } if (count === 1) {
-      return '1 copo de água'
-    } else if (count > 1) {
+function hydrate(bebida) {
+  let count = 0;
+  for (let i = 0; i < bebida.length; i += 1) {
+    if (!isNaN (parseInt(bebida[i]))) {
+      count += parseInt(bebida[i])
+    }
+  } if (count === 1) {
+    return '1 copo de água'
+  } else if (count > 1) {
       return `${count} copos de água`
     }
   } 
