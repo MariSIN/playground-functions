@@ -1,4 +1,5 @@
 # Boas-vindas ao repositório do Projeto Playground Functions!
+## Segundo projeto do módulo de Fundamentos da Trybe
 
 # Entregáveis
  
